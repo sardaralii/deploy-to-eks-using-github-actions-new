@@ -36,6 +36,7 @@ jobs:
         IMAGE_TAG: 1.1
       run: |
         docker build -t primuslearning1 .
+        docker tag primuslearning1:latest 540295416064.dkr.ecr.us-east-1.amazonaws.com/primuslearning1:latest
         docker push 540295416064.dkr.ecr.us-east-1.amazonaws.com/primuslearning1:latest
 
     - name: Update kube config
